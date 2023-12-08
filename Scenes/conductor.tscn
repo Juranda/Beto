@@ -4,6 +4,7 @@
 
 [node name="Conductor" type="AudioStreamPlayer"]
 script = ExtResource("1_6sgfr")
+bpm = 170
 
 [node name="StartTimer" type="Timer" parent="."]
 

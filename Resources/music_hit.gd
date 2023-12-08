@@ -1,12 +1,10 @@
 class_name MusicHit extends Resource
 
-enum HitButton {
-	A, B, X, Y
+
+@export var beat:int
+@export var acao:Ataques
+
+enum Ataques {
+	Mao1,
+	Mao2
 }
-
-@export var botao: HitButton
-
-var a: MusicHit = MusicHit.new()
-
-func _ready():
-	a.botao = HitButton.A

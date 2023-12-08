@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MusicHit" load_steps=2 format=3 uid="uid://ednaqbjmpb5u"]
+
+[ext_resource type="Script" path="res://Resources/music_hit.gd" id="1_fglp2"]
+
+[resource]
+script = ExtResource("1_fglp2")
+beat = 0
+acao = 0
