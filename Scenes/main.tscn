@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://c4fkxylu42h5v"]
+[gd_scene load_steps=3 format=3 uid="uid://c4fkxylu42h5v"]
+
+[ext_resource type="PackedScene" uid="uid://bpoaegcami0ko" path="res://Scenes/boss.tscn" id="1_wfb80"]
+[ext_resource type="Script" path="res://Scenes/boss.gd" id="2_v8er1"]
 
 [node name="Main" type="Node2D"]
+
+[node name="boss" parent="." instance=ExtResource("1_wfb80")]
+position = Vector2(932, 434)
+script = ExtResource("2_v8er1")

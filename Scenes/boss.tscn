@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpoaegcami0ko"]
+
+[ext_resource type="Texture2D" uid="uid://bxfu2q4yx5anm" path="res://icon.svg" id="1_yfhio"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tdfe6"]
+radius = 18.3818
+
+[node name="boss" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_yfhio")
+
+[node name="MaoEsquerda" type="Area2D" parent="."]
+position = Vector2(2.66667, 34.3333)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaoEsquerda"]
+shape = SubResource("CircleShape2D_tdfe6")
+
+[node name="MaoDireita" type="Area2D" parent="."]
+z_index = -1
+position = Vector2(-67, -0.333333)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaoDireita"]
+shape = SubResource("CircleShape2D_tdfe6")
