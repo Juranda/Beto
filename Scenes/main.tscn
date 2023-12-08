@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4fkxylu42h5v"]
+[gd_scene load_steps=5 format=3 uid="uid://c4fkxylu42h5v"]
 
 [ext_resource type="PackedScene" uid="uid://d0kaycnr85pnf" path="res://Scenes/boss.tscn" id="1_wfb80"]
 [ext_resource type="PackedScene" uid="uid://b07ow7kleqmb6" path="res://Scenes/conductor.tscn" id="2_hcdgi"]
 [ext_resource type="AudioStream" uid="uid://clscxoucer447" path="res://Audio/Nexus Encounter.wav" id="3_3lase"]
+[ext_resource type="AudioStream" uid="uid://b6nficupqdfjv" path="res://Audio/untitled.wav" id="4_oyxud"]
 
 [node name="Main" type="Node2D"]
 
@@ -11,6 +12,8 @@ position = Vector2(402, 111)
 
 [node name="Conductor" parent="." instance=ExtResource("2_hcdgi")]
 stream = ExtResource("3_3lase")
-autoplay = true
+
+[node name="Test" type="AudioStreamPlayer" parent="Conductor"]
+stream = ExtResource("4_oyxud")
 
 [node name="Camera2D" type="Camera2D" parent="."]
