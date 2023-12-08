@@ -1,5 +1,7 @@
 extends AudioStreamPlayer
 
+class_name BeatConductor
+
 @export var bpm := 100
 @export var measures := 4
 
@@ -21,6 +23,9 @@ signal sig_measure(position)
 
 func _ready():
 	sec_per_beat = 60.0 / bpm
+	play_with_beat_offset(1)
+	
+
 
 func _physics_process(_delta):
 	if playing:
