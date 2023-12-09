@@ -83,7 +83,7 @@ func ataque2():
 			tween2.tween_callback(
 				func():
 					var tween3 = create_tween()
-					tween3.tween_property(mao_esquerda, "position", start_position, conductor.sec_per_beat).set_delay((conductor.sec_per_beat*2)-.1)
+					tween3.tween_property(mao_esquerda, "position", start_position, conductor.sec_per_beat).set_delay((conductor.sec_per_beat)-.1)
 					tween3.tween_callback(
 					func():
 						print(position)

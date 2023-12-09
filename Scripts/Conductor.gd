@@ -42,7 +42,7 @@ func _report_beat():
 		emit_signal("beat", song_position_in_beats)
 		emit_signal("sig_measure", measure)
 		
-		#$Test.play()
+		$Test.play()
 		
 		last_reported_beat = song_position_in_beats
 		measure += 1

@@ -6,12 +6,12 @@
     
     {
         "action": 1,
-        "beat": 24
+        "beat": 14
     },
    
     {
         "action": 0,
-        "beat": 24
+        "beat": 20
     },
  
     {
@@ -21,7 +21,7 @@
   
     {
         "action": 1,
-        "beat": 24
+        "beat": 36
     }
 
 ]
