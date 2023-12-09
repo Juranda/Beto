@@ -11,7 +11,7 @@
 position = Vector2(402, 111)
 
 [node name="Marker2D" type="Marker2D" parent="boss"]
-position = Vector2(-240, -93)
+position = Vector2(-239, 27.6667)
 gizmo_extents = 3.4
 
 [node name="Conductor" parent="." instance=ExtResource("2_hcdgi")]
@@ -21,6 +21,5 @@ stream = ExtResource("3_3lase")
 stream = ExtResource("4_oyxud")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, 0)
 
 [editable path="boss"]

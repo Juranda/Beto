@@ -27,17 +27,75 @@ func _ready():
 	current_pattern = load_json_file(data_file_path)
 	conductor = get_node("/root/Main/Conductor")
 	conductor.beat.connect(thisBeat)
-	pass
-func ataque1():
-	print("ataque1")
-	var tween = create_tween()
-	
-	#tween.tween_property(mao_direita)
+	print(mao_direita.position)
 	pass
 
+var ataque1Active:bool = false
+func ataque1():
+	if(ataque1Active):
+		return
+	ataque1Active = true
+	mao_direita.active = false
+	print("ataque1")
+	
+	
+	var start_position:Vector2 = mao_direita.position
+	var target_position:Vector2 = Vector2(-239,27)
+	
+	var tween = create_tween()
+	tween.tween_property(mao_direita, "position", target_position, conductor.sec_per_beat).set_trans(Tween.TRANS_ELASTIC).set_delay(conductor.sec_per_beat)
+	tween.tween_callback(
+		func():
+			var tween2 = create_tween()
+			tween2.tween_property(mao_direita, "position", start_position,conductor.sec_per_beat).set_trans(Tween.TRANS_EXPO)
+			tween2.tween_callback(
+				func():
+					mao_direita.active = true
+					ataque1Active = false
+					pass
+			)
+			)
+		
+	
+	
+	
+
+
+var ataque2Active:bool = false
 func ataque2():
+	if(ataque2Active):
+		return
+	ataque2Active = true
+	mao_esquerda.active = false
 	print("ataque2")
-	pass
+	
+	var start_position:Vector2 = mao_esquerda.position
+	var target_position1:Vector2 = Vector2(-240, -93)
+	var target_position2:Vector2 = Vector2(-239,27)
+	
+	
+	var tween = create_tween()
+	tween.tween_property(mao_esquerda, "position", target_position1, conductor.sec_per_beat)
+	tween.tween_callback(
+		func():
+			var tween2 = create_tween()
+			tween2.tween_property(mao_esquerda, "position", target_position2,.1).set_delay(conductor.sec_per_beat)
+			tween2.tween_callback(
+				func():
+					var tween3 = create_tween()
+					tween3.tween_property(mao_esquerda, "position", start_position, conductor.sec_per_beat).set_delay((conductor.sec_per_beat*2)-.1)
+					tween3.tween_callback(
+					func():
+						print(position)
+						mao_esquerda.active = true
+						ataque2Active = false
+						pass
+			)
+			
+			)
+			)
+		
+	
 
 func thisBeat(song_position_in_beats):
 	if current_beat == current_pattern.size():
