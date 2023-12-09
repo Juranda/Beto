@@ -1,0 +1,27 @@
+[
+    {
+        "action": 1,
+        "beat": 12
+    },
+    
+    {
+        "action": 1,
+        "beat": 24
+    },
+   
+    {
+        "action": 0,
+        "beat": 24
+    },
+ 
+    {
+        "action": 0,
+        "beat": 24
+    },
+  
+    {
+        "action": 1,
+        "beat": 24
+    }
+
+]
