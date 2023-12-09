@@ -10,7 +10,7 @@ var current_beat:int = 0
 @export var current_pattern = []
 var data_file_path = "res://patterns/Pattern1.json"
 
-func load_json_file(filePath:String):
+func load_json_file(filePath:	String):
 	if FileAccess.file_exists(filePath):
 		var dataFile = FileAccess.open(filePath, FileAccess.READ)
 		var parsedResult = JSON.parse_string(dataFile.get_as_text())
@@ -30,6 +30,9 @@ func _ready():
 	pass
 func ataque1():
 	print("ataque1")
+	var tween = create_tween()
+	
+	#tween.tween_property(mao_direita)
 	pass
 
 func ataque2():
